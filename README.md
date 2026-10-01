@@ -13,7 +13,7 @@
 
 ## Установка
 ```bash
-pip install git+https://github.com/ваш_логин/vidreadpy.git
+pip install git+https://github.com/davidsarkisyan280-cyber/vidreadpy.git
 ```
 
 ## Быстрый старт
