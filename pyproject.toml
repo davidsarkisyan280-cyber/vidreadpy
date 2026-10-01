@@ -1,12 +1,12 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "vidreadpy"
 version = "0.1.0"
 authors = [
-  { name="davidsarkisyan280-cyber", email="davidsarkisyan280@gmail.com" },
+  { name="David Sarkisyan", email="you@example.com" },
 ]
 description = "Лёгкая библиотека для чтения видео на Python через FFmpeg (без OpenCV)"
 readme = "README.md"
@@ -29,4 +29,8 @@ Homepage = "https://github.com/davidsarkisyan280-cyber/vidreadpy"
 Issues = "https://github.com/davidsarkisyan280-cyber/vidreadpy/issues"
 
 [project.optional-dependencies]
-dev = ["pytest", "ruff", "tqdm"]
+dev = ["pytest", "ruff"]
+
+# Ключевой момент: собираем «плоский» пакет из модулей в корне
+[tool.setuptools]
+py-modules = ["reader", "utils"]
